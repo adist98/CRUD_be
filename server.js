@@ -9,7 +9,7 @@ const db = require('./config/mongoose');
 app.use(express.json());
 app.use(cors());
 
-const port = 9000;
+const port = 80;
 
 // create a new task
 const createTodo = require("./routes/createTodo");
@@ -28,7 +28,7 @@ const deleteTodo = require("./routes/deleteTodo");
 app.use("/deletetodo", deleteTodo);
 
 app.get("/", (req, res) => {
-    res.send("server working on port 9000");
+    res.send("server working on port 80");
   });
 app.listen(port);
   
